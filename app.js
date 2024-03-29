@@ -14,3 +14,17 @@ const questions = [
         correct: 0
     },
 ];
+function showQuestion(){
+    const questionText = document.getElementById("question-text");
+    questionText.textContent = questions[currentQuestion].question;
+
+    const choices = document.querySelectorAll(".choice");
+    choices.forEach((choice,index)=>{
+        choice.textContent = questions[currentQuestion].choices[index];
+    });
+    const feedback = document.getElementById("feedback");
+    feedback.textContent = " ";
+
+    
+
+}
