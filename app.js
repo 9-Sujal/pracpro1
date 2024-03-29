@@ -25,6 +25,9 @@ function showQuestion(){
     const choices = document.querySelectorAll(".choice");
     choices.forEach((choice,index)=>{
         choice.textContent = questions[currentQuestion].choice[index];
+        choice.style.fontSize = "20px";
+        choice.style.fontWeight = " bold";
+        choice.style.color = "white";
     });
     const feedback = document.getElementById("feedback");
     feedback.textContent = " ";
@@ -36,6 +39,7 @@ checkAnswer = (selected)=>{
     const feedback = document.getElementById("feedback");
     if(selected=== questions[currentQuestion].correct){
         feedback.textContent = "7 croreeeeee";
+        
         correctAnswer++;
 
     }else{
@@ -51,6 +55,9 @@ checkAnswer = (selected)=>{
         }else{
             const quizContainer = document.querySelector(".quizcontainer");
             quizContainer.innerHTML= `<p>teri ${correctAnswer} hi aukat hai ${questions.length} mai se `
+            quizContainer.style.fontSize = "30px";
+            quizContainer.style.fontWeight = "bold";
+
         }
 
     }, 2000);
