@@ -14,13 +14,17 @@ const questions = [
         correct: 0
     },
 ];
+let currentQuestion = 0;
+let correctAnswer = 0;
+
+
 function showQuestion(){
     const questionText = document.getElementById("question-text");
     questionText.textContent = questions[currentQuestion].question;
 
     const choices = document.querySelectorAll(".choice");
     choices.forEach((choice,index)=>{
-        choice.textContent = questions[currentQuestion].choices[index];
+        choice.textContent = questions[currentQuestion].choice[index];
     });
     const feedback = document.getElementById("feedback");
     feedback.textContent = " ";
@@ -28,3 +32,28 @@ function showQuestion(){
     
 
 }
+checkAnswer = (selected)=>{
+    const feedback = document.getElementById("feedback");
+    if(selected=== questions[currentQuestion].correct){
+        feedback.textContent = "7 croreeeeee";
+        correctAnswer++;
+
+    }else{
+        feedback.textContent = "ye glt uttar hai";
+
+    }
+    setTimeout(()=>{
+        currentQuestion++;
+
+        if(currentQuestion < questions.length){
+            showQuestion();
+
+        }else{
+            const quizContainer = document.querySelector(".quizcontainer");
+            quizContainer.innerHTML= `<p>teri ${correctAnswer} hi aukat hai ${questions.length} mai se `
+        }
+
+    }, 2000);
+
+}
+showQuestion();
