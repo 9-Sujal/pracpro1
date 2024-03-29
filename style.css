@@ -23,7 +23,7 @@
     margin: 5px 5px;
     padding: .5em .75em;
     border-radius: 1em;
-    background-color: rgb(206, 172, 148);
+    background-color: rgb(8, 8, 8);
     cursor:grab;
 
 }
@@ -40,3 +40,18 @@
     
     
 }
+.question{
+    padding:15px;
+    margin: 2em 2em 2em;
+    background-color: rgb(41, 146, 94);
+    
+   
+}
+.option{
+    font-size: 1em;
+    color: rgb(205, 198, 198);
+    font-weight: bold;
+    font-style: oblique;
+    
+}
+
