@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>QUIZ APP</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="quizcontainer">
+        <h1>Sample quiz</h1>
+     <div class="question">
+     <p id="question-text">
+        1: what is your name?
+     </p>
+      <div class="choices">
+        <button class="choice"
+         onclick="checkAnswer(0)">gelcho </button>
+         <button class="choice"
+         onclick="checkAnswer(1)">madcho</button>
+         <button class="choice"
+         onclick="checkAnswer(2)">bhencho </button>
+      </div>
+      <span id="feedback"> </span>
+     
     
+     </div>
+
+    </div>
+ <script src="app.js"></script>
 </body>
 </html>
